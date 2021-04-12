@@ -1,0 +1,33 @@
+* KDMX for Mac OS
+
+This is a simple program included in agent-proxy
+(git://git.kernel.org/pub/scm/utils/kernel/kgdb/agent-proxy.git). I've just
+changed *a* line to make the program available in Mac OS since there is no ioctl
+in BSD.
+
+
+* What is KDMX?
+
+kdmx is a program designed to split GDB packets and other trafic coming
+from a target on a serial line into 2 separate pseudo-ttys.
+
+The most common use of this is to run kgdb and console on a single serial
+port, but should be usable for alternating gdbserver or console over a serial
+line as well.
+
+To exit from kdmx, kill the program or issue a control-c.
+
+Full usage information can be obtained from:
+
+#+BEGIN_SRC bash
+   make
+   ./kdmx -h
+#+END_SRC
+
+* License
+
+Follow GPLv2 license according to COPYING file.
+
+* Reference
+
+- [[https://www.youtube.com/watch?v=HBOwoSyRmys][Using Serial kdb / kgdb to Debug the Linux Kernel - Douglas Anderson, Google]]
